@@ -3,7 +3,7 @@ const express = require('express');
 const cors = require('cors');
 
 const token = "7410338603:AAHQhfMwDDL3O-Kx1UmGO5nh9JjHPlV5QMI";
-const webAppUrl = 'https://875b-89-22-235-168.ngrok-free.app/';
+const webAppUrl = 'https://875b-89-22-235-168.ngrok-free.app';
 
 const bot = new TelegramBotApi(token, { polling: true });
 
@@ -20,7 +20,7 @@ bot.on('message', async (msg) => {
     await bot.sendMessage(chatId, 'Ниже появится кнопка, заполни форму', {
       reply_markup: {
         keyboard: [
-          [{ text: 'Заполнить форму', web_app: { url: webAppUrl + 'form' } }]
+          [{ text: 'Заполнить форму', web_app: { url: webAppUrl + '/form' } }]
         ]
       }
     });
