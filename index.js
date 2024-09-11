@@ -3,7 +3,7 @@ const express = require('express');
 const cors = require('cors');
 
 const token = "7410338603:AAHQhfMwDDL3O-Kx1UmGO5nh9JjHPlV5QMI";
-const webAppUrl = 'https://875b-89-22-235-168.ngrok-free.app';
+const webAppUrl = 'https://sparkling-pie-124677.netlify.app/';
 
 const bot = new TelegramBot(token, {polling: true});
 const app = express();
